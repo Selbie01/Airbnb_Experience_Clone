@@ -32,18 +32,32 @@ body{
     align-self: center;
 }
 
+.cardList {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;   
+    justify-content: center;
+}
+
 .card {
     width: 175px;
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
+    flex: 0 0 auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
 }
 .cardImage{
     width: 100%;
+    height: 15rem;
     border-radius: 9px;
 }
 .cardStats {
     display: flex;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 .cardStar {
     height: 14px;
@@ -54,3 +68,15 @@ body{
 .boldText {
     font-weight: bold;
 }
+.cardBadge{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    width: auto;
+    height: auto;
+    padding: 5px 5px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+

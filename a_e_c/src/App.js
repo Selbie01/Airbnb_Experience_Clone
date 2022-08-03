@@ -2,20 +2,21 @@ import React from 'react'
 import Nav from "./Nav"
 import Hero from "./Hero"
 import Card from "./Card"
+import cardData from './CardData'
 
 function App() {
+ const cards = cardData.map(card => {
+  return (
+    <Card 
+      key = {card.id} 
+      {...card}
+    />) 
+  })
   return (
     <>
       <Nav />
       <Hero />
-      <Card
-        img = "./img/image 12.png"
-        rating = "5.0"
-        numRating = "(6)"
-        country = "- USA"
-        title = "Life Lessons with Katie Zaferes"
-        quota = "From $136/person" 
-      />
+      <section className="cardList">{cards}</section>
     </>
   );
 }
